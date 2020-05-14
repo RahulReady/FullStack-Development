@@ -87,3 +87,22 @@ Can use `db.session` to insert records into a table <br>
 
 **Constraints**: Done to ensure data integrity and consistency
 ![ConstraintsEx](Images/ConstraintsEx.png)
+
+**Adding Values to db**
+![AddingDB](Images/ReviewDBAdd.png)
+
+**Object lifecycle stages**
+![AddingDB](Images/ObjectLifeCycle.png)
+
+A **flush** takes pending changes and translates it into commands ready to be committed.
+<br>A **commit** leads to a persisted change to a db and lets the db.session start a new transaction. <br>
+
+
+## Web app building
+**Models:** Essentially data, or tables in app <br>
+**Views:** How things are represented visually <br>
+**Controllers:** Action and logic to take to display views based on data <br>
+
+**Getting User Data**
+![GetUserData](Images/GettingUserData1.png)
+We get form data from the keys with the html name attribute.

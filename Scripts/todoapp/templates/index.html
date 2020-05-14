@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>to-do app</title>
+  </head>
+  <body>
+    <!-- Creating a form element to add items to db -->
+    <form id = 'form' method = 'post' action="/todos/create">
+        <input type="text" name="description"><br>
+        <input type="submit" value="Create">
+    </form>
+
+    <!-- Iterating through data that was passed in -->
+    <ul id = "todos">
+      {% for d in data %}
+      <li>{{d.description}} </li>
+      {% endfor %}
+    </ul>
+
+
+  </body>
+</html>

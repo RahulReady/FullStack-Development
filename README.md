@@ -106,3 +106,32 @@ A **flush** takes pending changes and translates it into commands ready to be co
 **Getting User Data**
 ![GetUserData](Images/GettingUserData1.png)
 We get form data from the keys with the html name attribute.
+
+
+## API
+
+**Hypertext transfer Protocol:** Protocol that allows provides a standardized way for computers to communicate with each other. <br>
+**Connectionless:** Client and server only maintain a connection during a request and response.<br>
+**Stateless:** No dependency between successive requests.<br>
+**Not Sessionless:** Utilizing cookies, sessions can be created to allow each HTTP request to share the same context.<br>
+**Media Independent:** Any type of data can be sent as long as both parties know how to handle and recieve the data.<br>
+
+**HTTP Reqests:**
+Different request methods indicate different operations to be performed. It's essential to attend to this to correctly format your requests and properly structure an API.
+
+**Request Methods:** <br>
+**GET:** ONLY retrieves information for the requested resource of the given URI <br>
+**POST:** Send data to the server to create a new resource.<br>
+**PUT:** Replaces all of the representation of the target resource with the request data<br>
+**PATCH:** Partially modifies the representation of the target resource with the request data<br>
+**DELETE:** Removes all of the representation of the resource specified by the URI<br>
+**OPTIONS:** Sends the communication options for the requested resource<br><br>
+**Status Codes** <br>
+`1xx` Informational <br>
+`2xx` Success <br>
+`3xx` Redirection <br>
+`4xx` Client Error <br>
+`5xx` Server Error <br> <br>
+**Curl:**: Way to transfer data using URL's <br>
+**Endpoints** should be organized in `collection/item/collection` and collection should be plural. <br>
+**Same Origin Policy** Form of web security that allows scripts from webpage 1 to access data from webpage 2 only if they have the same domain name. Needed to protect users from malicious scripts <br>

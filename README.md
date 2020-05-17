@@ -135,3 +135,31 @@ Different request methods indicate different operations to be performed. It's es
 **Curl:**: Way to transfer data using URL's <br>
 **Endpoints** should be organized in `collection/item/collection` and collection should be plural. <br>
 **Same Origin Policy** Form of web security that allows scripts from webpage 1 to access data from webpage 2 only if they have the same domain name. Needed to protect users from malicious scripts <br>
+
+#### Containers
+
+**Container vs Virtual machines:** While they both provide a means to solve the 'it works on my computer problem', a container is a less resource intensive way of solving that problem.
+
+In the container model, there are no virtual operating systems or virtual hardware.<br>
+![VM vs Container](Images/vmvscontainer.png)
+
+A docker engine contains the 'Docker Daemon', 'docker client', and a 'docker api'.
+
+**Docker Commands** <br>
+
+`https://github.com/harnav/pydata-docker-tutorial/blob/master/docker-start/00-dockerclient.org`: Basics github repo <br><br>
+`docker pull postgres:latest` Downloads image to your machine. In this case download the latest postgres image. <br>
+
+`docker run --name psql -e POSTGRES_PASSWORD=password! -p 5432:5432 -d postgres:latest`: Run the image. In this case, supplying a password for postgres. <br>
+
+* `--name` Specifies name of container. If none is chosen, docker assigns a random string <br>
+* The `-e` flag stands for “environment”. This sets the environment variable `POSTGRES_PASSWORD` to the value `password!`. <br>
+* The `-p` flag stands for “publish”. This allows you to bind your local machine’s port 5432 to the container port 5432.
+* The `-d` stands for “detach”. This tells Docker run the indicated image in the background and print the container ID. When you use this command, you will still be able to use the terminal to run other commands, otherwise you would need to open a new terminal.
+
+`psql -h 0.0.0.0 -p 5432 -U postgres`: connect with the Docker container database <br>
+`\q`: quits connection to postgres <br>
+`docker ps`: lists running containers<br>
+`docker stop <container_id>`: stops the container
+`docker ps -a`: lists contains you have run on your machine.<br>
+`docker run -it <name of image>`: go inside container.<br>

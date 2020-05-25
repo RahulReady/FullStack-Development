@@ -18,6 +18,13 @@ h1{
   font-size: 3.5rem;
   line-height: 1.5;
 }
+h2{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1.5
+}
+
 h3{
   font-family: 'Montserrat';
   font-weight: 900;
@@ -60,7 +67,7 @@ P{
 
 /* Features */
 #features{
-  padding: 10% 20%;
+  padding: 6% 15%;
 }
 
 .features-box{
@@ -75,4 +82,47 @@ P{
 /* psudo states */
 .feature-icon:hover{
   color: #ff4c68;
+}
+
+/* Tesimonials Section */
+
+#testimonials{
+  text-align: center;
+  background-color: #ef8172;
+  color: #fff;
+}
+.carousel-item{
+  padding: 6% 15%;
+}
+.testimonial-image{
+  width: 10%;
+  border-radius: 100%;
+  margin: 20px;
+}
+
+/* Press Section */
+#press{
+  background-color: #ef8172;
+  text-align: center;
+  padding-bottom: 4%;
+}
+
+.press-logo{
+  width: 15%;
+  margin: 25px 25px 0 25px;
+}
+
+/* Pricing */
+
+#pricing{
+  text-align: center;
+  padding: 5% 5%;
+}
+
+.card-deck{
+  margin: 0 auto;
+}
+
+.pricing-column{
+  padding-top: 5% 5% ;
 }

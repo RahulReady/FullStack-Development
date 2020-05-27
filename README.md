@@ -1,6 +1,6 @@
 # FullStackDevelopment Notesheet
 
-
+Notes taken from the Udacity fullstack development course
 ## Database commands:
 Installation: `$ brew install postgres` <br>
 Start Postgres server:```$ pg_ctl -D /usr/local/var/postgres start ```<br>

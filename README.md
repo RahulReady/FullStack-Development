@@ -163,3 +163,40 @@ A docker engine contains the 'Docker Daemon', 'docker client', and a 'docker api
 `docker stop <container_id>`: stops the container
 `docker ps -a`: lists contains you have run on your machine.<br>
 `docker run -it <name of image>`: go inside container.<br>
+
+
+## Design Notes
+Notes taken from Angela Yu's web dev course. <br><br>
+__Main point__: 3 seconds to make a good first impression, so make it count!
+
+### Color theory
+![colorsMoods](Images/colorMoods.png)
+#### Complementary Colors useful for images to stand outl
+![complementaryColor](Images/complementaryColors.png)
+
+Useful for messing around with different color rules: `https://color.adobe.com/create` <br>
+Also: `colorhunt.co` <br>
+
+### Typography
+Different types of font elicit different emotions from users and should be used carefully.
+![Fonts](Images/fonts.png)
+* 40 to 60 characters per line is optimal length. You don't want it too long or too short.
+
+### UI design
+![Gridlines](Images/gridlines.png)
+* Make sure to properly align elements on your website for a more professional look.
+* Whitespace adds an elevated/ minimalist look. It helps from keeping things too cluttered.
+* Remember to create a design that suits the audience.
+
+### UI design rules
+1) Hierarchy <br>
+2) Layouts <br>
+3) Alignment <br>
+4) Whitespace <br>
+5) Audience <br>
+
+### UX design rules
+1) Simplicity <br>
+2) Consistency <br>
+3) Reading patterns: ex - use the F-layout/Z-layout<br>
+4) All platform design (web/mobile) <br>

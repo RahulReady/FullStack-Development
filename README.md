@@ -200,3 +200,9 @@ Different types of font elicit different emotions from users and should be used 
 2) Consistency <br>
 3) Reading patterns: ex - use the F-layout/Z-layout<br>
 4) All platform design (web/mobile) <br>
+
+Practicing Design:
+`https://www.dailyui.co/`
+`https://collectui.com/`
+
+`canva` prototyping 

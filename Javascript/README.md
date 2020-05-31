@@ -48,3 +48,17 @@ function namedFunction(){
   numbers.pop(); //removes last item from array
   for and while loops work the same way as in java
   ```
+__DOM__ <br>
+  Document Object Model (DOM) is a platform and language-neutral interface that allows programs and scripts to dynamically access and update the content, structure, and style of a document.
+```
+document.querySelector('h1').classList.toggle('huge');
+```
+querySelector() finds the appropriate html element. <br>
+classList tells us the name and values of that particular query selection. Toggle() turns on and off the particular css element in your css stylesheet. In this case it is turning on and off the 'huge' class.
+
+```
+document.querySelector('a').attributes;
+document.querySelector('a').getAttribute('href');
+document.querySelector('a').setAttribute('href', 'bing.com');
+```
+Above code gets the attributes for a anchor tag, and sets the specific attribute to point to bing.com

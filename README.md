@@ -205,4 +205,4 @@ Practicing Design:
 `https://www.dailyui.co/`
 `https://collectui.com/`
 
-`canva` prototyping 
+`canva` prototyping

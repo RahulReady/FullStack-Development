@@ -62,3 +62,8 @@ document.querySelector('a').getAttribute('href');
 document.querySelector('a').setAttribute('href', 'bing.com');
 ```
 Above code gets the attributes for a anchor tag, and sets the specific attribute to point to bing.com
+
+```
+target.addEventListener(type, listener [, options]);
+```
+Where type is an event type to listen for ex- 'click'. listener could be a function to call when the 'click' occurs.

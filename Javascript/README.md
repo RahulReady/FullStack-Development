@@ -66,4 +66,32 @@ Above code gets the attributes for a anchor tag, and sets the specific attribute
 ```
 target.addEventListener(type, listener [, options]);
 ```
-Where type is an event type to listen for ex- 'click'. listener could be a function to call when the 'click' occurs.
+Where type is an event type to listen for ex- 'click'. listener could be a function to call when the 'click' occurs. <br> Higher order functions are functions that can take functions as input.
+
+__Constructors__ <br>
+Function name has to be capitalized.
+```
+function Person(name, age, languages){
+  this.name = name;
+  this.age = age;
+  this.languages = languages;
+  // can also add a fuction inside a constructor
+  this.move = function (){
+    alert('I am moving!');
+  }
+}
+// creating a new object based on constructor
+var person1 = new Person('Tim', 23, ['english', 'french']);
+```
+
+__Switch__
+```
+if a button is pressed, look for what button is pressed, the execute the relevant code and break from switch.
+switch (buttonPressed) {
+  case "w":
+    Insert things you want executed here
+    break;
+  default:
+
+}
+```

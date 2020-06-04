@@ -95,3 +95,69 @@ switch (buttonPressed) {
 
 }
 ```
+__JQuery__ <br>
+Basically simplifies JS code.
+
+```
+$('h1').css('color', 'red');
+// $ - is same as 'JQuery'.
+//Select h1 tag, and change the color css property to red.
+
+// If you want a property of an element,
+console.log($('h1').css('color'));
+
+// adding class(s) to js code
+$('h1').addClass('enlarge-title margin-100');
+//removing classes
+$('h1').removeClass('enlarge-title margin-100');
+//checking if element has a class
+$('h1').hasClass('enlarge-title margin-100');
+
+// modifies text inside button to say hello
+$('button').text('Hello');
+// modifies html inside button and can also add html
+$('button').text(<em>Hello</em>);
+
+//sets href value of anchor tag to google.com
+$('a').attr('href', 'google.com')
+
+//adding event listeners
+$('button').click(function(){
+  $('h1').css('color', 'red');
+});
+
+// detecting keypresses
+$('input').keypress(function(event){
+  console.log(event.key);
+});
+
+
+//general event listeners
+// (Reference) https://developer.mozilla.org/en-US/docs/Web/Events
+$('h1').on('mouseover', function(){
+  $('h1').css('color','purple');
+});
+
+//Adding html elements on the fly
+$('h1').before('<button>New button</button>');
+after, prepend, append (where prepend/append adds them inside the specified class)
+
+$('h1').remove(); // removes all h1 elements
+
+//other characteristics
+$('h1').hide();
+$('h1').show();
+$('h1').toggle();
+$('h1').fadeOut();
+$('h1').fadeIn();
+$('h1').fadeToggle();
+$('h1').slideUp();
+$('h1').slideDown();
+$('h1').slideToggle();
+
+// allows you to define custom css (sticking to things that have a numeric value)
+$('h1').animate({opacity: 0.5});
+
+//can chain commands
+$('h1').slideUp().slideDown().animate({opacity: 0.5});
+```

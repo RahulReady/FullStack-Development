@@ -1,5 +1,22 @@
 # FullStackDevelopment Notesheet
 
+## Command line shortcuts
+https://www.learnenough.com/command-line-tutorial/basics
+```
+// go to beginning of the line
+ctrl + a
+// go to end of the line
+ctrl + e
+// delete line written
+ctrl + u
+// click specific point in line
+option + click
+// open a file with atom
+open -a Atom ex.txt
+// remove directory
+rm -r nameOfDirectory/
+```
+
 Notes taken from the Udacity fullstack development course
 ## Database commands:
 Installation: `$ brew install postgres` <br>

@@ -30,13 +30,13 @@ const app = express();
 app.get('/', function(req, res){
   res.send('<h2>Hello!</h2>');
 });
+
+// Can do multiple res.writes() before doing a res.send()
 ```
 
 __Body-parser__
 ```
-// used for parsing web data
-
-// parsing form data
+// used for parsing web data/ form data
 app.use(bodyParser.urlencoded({extended : true}));
 ```
 

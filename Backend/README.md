@@ -39,3 +39,19 @@ __Body-parser__
 // parsing form data
 app.use(bodyParser.urlencoded({extended : true}));
 ```
+
+__API__
+```
+//example of weather api
+after the ? signals the parameters of the API request.
+// each subsequent request is followed by &key=value
+api.openweathermap.org/data/2.5/weather?units=metric&lat=35&lon=139&appid=74f26bb8155f1b73a2fcfdc1a2192f69
+```
+
+```
+// turning javascript object into string
+JSON.stringify(object);
+
+turning string into json object
+JSON.parse(object);
+```

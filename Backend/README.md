@@ -17,41 +17,46 @@ __Express__ - It is to node as JQuery is to Javascript. No need to write redunda
 
 __Useful Functions__
 ```
-// gets the path of current folder no matter the type of environment
+// Gets the path of current folder no matter the type of environment
 console.log(__dirname);
 ```
 __Basics of Express__
 ```
-// importing and initializing express (after installing via npm)
+// Importing and initializing express (after installing via npm)
 const express = require('express');
 const app = express();
 
-// once app gets to 'home page', the innput to the call back funct is request and the output is the response.
+// Once app gets to 'home page', the innput to the call back funct is request and the output is the response.
 app.get('/', function(req, res){
   res.send('<h2>Hello!</h2>');
 });
 
 // Can do multiple res.writes() before doing a res.send()
+
+// Using files in a specific folder for ex css/images
+app.use(express.static("<insert-folder-name-here>"));
 ```
 
 __Body-parser__
 ```
-// used for parsing web data/ form data
+// Used for parsing web data/ form data
 app.use(bodyParser.urlencoded({extended : true}));
 ```
 
 __API__
 ```
-//example of weather api
+// Example of weather api
 after the ? signals the parameters of the API request.
-// each subsequent request is followed by &key=value
+// Each subsequent request is followed by &key=value
 api.openweathermap.org/data/2.5/weather?units=metric&lat=35&lon=139&appid=74f26bb8155f1b73a2fcfdc1a2192f69
 ```
 
 ```
-// turning javascript object into string
+// Turning javascript object into string
 JSON.stringify(object);
 
-turning string into json object
+// Turning string into json object
 JSON.parse(object);
+
+//
 ```

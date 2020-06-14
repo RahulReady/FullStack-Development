@@ -58,5 +58,23 @@ JSON.stringify(object);
 // Turning string into json object
 JSON.parse(object);
 
-//
+```
+__Templating__ <br>
+Reference: https://ejs.co/
+```
+// Let's you generate HTML markup from Javascript
+// app.js file
+// Looks for ejs file inside a views folder that must be created in home dir
+res.render('index', {kindOfDay: day});
+// index.ejs file
+<%= kindOfDay %>
+// So changes the html output based in input param
+
+// scriptlet tag encloses code within ejs file
+<%  js code %>
+
+
+
+
+
 ```

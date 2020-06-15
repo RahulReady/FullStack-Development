@@ -3,52 +3,37 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
-app = express();
+const app = express();
+var items = ['Be awesome!'];
 
 app.set('view engine', 'ejs');
+
+// for reading form data
+app.use(bodyParser.urlencoded({extended:true}));
+
+app.use(express.static('public'));
 
 app.get('/', function(req, res){
 
   var today = new Date();
-  var currentDay = today.getDay();
-  var day = '';
 
-  // Sunday starts at 0
-  switch(currentDay){
-    case 0:
-      day = 'Sunday';
-      break;
+  options = {
+    weekday : 'long',
+    day : 'numeric',
+    month : 'long'
+  };
 
-    case 1:
-      day = 'Monday';
-      break;
+  var day = today.toLocaleDateString('en-us', options);
 
-    case 2:
-      day = 'Tuesday';
-      break;
+  res.render('list', {kindOfDay: day, newListItems: items});
 
-    case 3:
-      day = 'Wednesday';
-      break;
+});
 
-    case 4:
-      day = 'Thursday';
-      break;
+app.post('/', function(req, res){
+  var item = req.body.newItem;
+  items.push(item);
 
-    case 5:
-      day = 'Friday';
-      break;
-
-    case 6:
-      day = 'Saturday';
-      break;
-
-    default:
-    console.log('What the fudge?! Day number is' + currentDay);
-
-  }
-  res.render('list', {kindOfDay: day});
-
+  res.redirect('/');
 });
 
 app.listen(3000, function(){

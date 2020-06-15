@@ -72,9 +72,7 @@ res.render('index', {kindOfDay: day});
 
 // scriptlet tag encloses code within ejs file
 <%  js code %>
-
-
-
-
+// redirects an incoming request to a desired location
+res.redirect('/');
 
 ```

@@ -76,3 +76,19 @@ res.render('index', {kindOfDay: day});
 res.redirect('/');
 
 ```
+
+__Layouts__ <br>
+```
+// Can add to ejs file and can be used in place of writing redundant code
+<%- include('header') -%>
+
+```
+__Module__ <br>
+```
+// create a file with necessary code and you can use following to use it
+const date = require(__dirname + '/<insertFileName>.js');
+
+// returns the uncalled function
+module.exports = <functionHere>;
+exports.<giveAName> = <function-you-want-to-use>;
+```

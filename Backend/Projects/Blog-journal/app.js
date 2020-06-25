@@ -28,19 +28,19 @@ app.get('/contact', function(req, res){
   res.render('contact', {contactContent: contactContent});
 })
 
+app.get('/compose', function(req, res){
+  res.render('compose');
+});
 
-// $('#home').click(function(){
-//    res.render('home', {homeStartingContent: homeStartingContent});
-// });
-// $('#about').click(function(){
-//    res.render('about', {aboutContent: aboutContent});
-// });
-// $('#contact').click(function(){
-//    res.render('contact', {contactContent: contactContent});
-// });
+app.post('/compose', function(req, res){
+  //published_item = req.body.textTitle;
+  const post = {
+    title: req.body.textTitle,
+    body: req.body.textBody
+  };
+  console.log(post);
 
-
-
+});
 
 
 

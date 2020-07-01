@@ -92,3 +92,41 @@ const date = require(__dirname + '/<insertFileName>.js');
 module.exports = <functionHere>;
 exports.<giveAName> = <function-you-want-to-use>;
 ```
+__SQL__ <br>
+```
+// Creating a table
+CREATE TABLE Products (
+  id INT NOT NULL,
+  name STRING,
+  price MONEY,
+  PRIMARY KEY (id)
+  )
+
+// Updating a table (method 1)
+INSERT INTO Products
+VALUES (1, 'pen', 1.20)
+
+// Updating a table (method 2)
+INSERT INTO Products (id, name)
+VALUES (2,'pencil');
+
+// Updating records
+UPDATE Products
+SET price = 0.8
+WHERE id = 2;
+
+// Add, delete, or modify columns
+ALTER TABLE products
+ADD stock INT;
+
+// Deleting records
+DELETE FROM Products
+WHERE id = 1;
+
+```
+__NOSQL(Mongodb)__ <br>
+```
+// Make sure to follow instructions on installing mongodb from their website
+
+
+```

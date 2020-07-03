@@ -14,34 +14,41 @@ const app = express();
 
 app.set('view engine', 'ejs');
 
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
 app.use(express.static("public"));
 
 let posts = [];
 
-app.get('/', function(req, res){
+app.get('/', function(req, res) {
 
   console.log(posts)
   res.render('home', {
     homeStartingContent: homeStartingContent,
-    posts: posts});
+    posts: posts
+  });
 
 });
 
 
-app.get('/about', function(req, res){
-  res.render('about', {aboutContent: aboutContent});
+app.get('/about', function(req, res) {
+  res.render('about', {
+    aboutContent: aboutContent
+  });
 });
 
-app.get('/contact', function(req, res){
-  res.render('contact', {contactContent: contactContent});
+app.get('/contact', function(req, res) {
+  res.render('contact', {
+    contactContent: contactContent
+  });
 })
 
-app.get('/compose', function(req, res){
+app.get('/compose', function(req, res) {
   res.render('compose');
 });
 
-app.post('/compose', function(req, res){
+app.post('/compose', function(req, res) {
   //published_item = req.body.textTitle;
   const post = {
     title: req.body.textTitle,
@@ -53,18 +60,21 @@ app.post('/compose', function(req, res){
 });
 
 
-app.get('/posts/:postDay', function(req, res){
+app.get('/posts/:postDay', function(req, res) {
   const requestedTitle = lodash.lowerCase(req.params.postDay);
-// for each loop
-  posts.forEach(function(post){
+  // for each loop
+  posts.forEach(function(post) {
     const title = lodash.lowerCase(post.title);
-    if(requestedTitle === title){
+    if (requestedTitle === title) {
       const link = '/posts/' + title
       console.log('Match found!');
-      res.render('post', {post: post, link:link});
+      res.render('post', {
+        post: post,
+        link: link
+      });
     }
   })
- // For loop
+  // For loop
   // for(let i = 0; i < posts.length; i++){
   //   if(posts[i]['title'] === requestedTitle){
   //     console.log('Match found');

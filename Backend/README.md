@@ -128,5 +128,37 @@ __NOSQL(Mongodb)__ <br>
 ```
 // Make sure to follow instructions on installing mongodb from their website
 
+// Commands
+mongod -> Starts a 'mongo db instance'
+mongo -> Enables you to write commands for the db
+help -> commands available
+show dbs -> Shows current available databases
+use <dbName> -> Switchs to <dbName> or creates db if does not exist.
+show collections -> Shows the the collections (similar to tables in sql)
 
+// Relevant CRUD Docs
+https://docs.mongodb.com/manual/crud/#read-operations
+
+// Example from mongodb website of inserting values in a 'collection' (where inventory is a collection (similar to SQL table))
+db.inventory.insertOne(
+   { "item" : "canvas",
+     "qty" : 100,
+     "tags" : ["cotton"],
+     "size" : { "h" : 28, "w" : 35.5, "uom" : "cm" }
+   }
+)
+// Reading Operations (finds all records)
+db.<collectionName>.find()
+
+https://docs.mongodb.com/manual/reference/operator/query/
+
+// Conditional queries example (1st without projection/ 2nd with projection(return specific attributes))
+db.products.find({price:{$gt:0.5}})
+db.products.find({name:'Pencil' }, {name: 1, _id: 0, price:1})
+
+// Update example
+db.products.updateOne({_id:1}, {$set: {stock:32}})
+
+// Delete example
+db.products.deleteOne({_id: 2})
 ```

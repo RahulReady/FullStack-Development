@@ -135,6 +135,11 @@ help -> commands available
 show dbs -> Shows current available databases
 use <dbName> -> Switchs to <dbName> or creates db if does not exist.
 show collections -> Shows the the collections (similar to tables in sql)
+// Delete db
+use <dbname>
+db.dropDatabase()
+
+//
 
 // Relevant CRUD Docs
 https://docs.mongodb.com/manual/crud/#read-operations
@@ -161,4 +166,8 @@ db.products.updateOne({_id:1}, {$set: {stock:32}})
 
 // Delete example
 db.products.deleteOne({_id: 2})
+
+// Mongodb simplified with js
+https://mongoosejs.com/
+
 ```

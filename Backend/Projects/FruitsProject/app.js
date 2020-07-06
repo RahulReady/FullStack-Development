@@ -1,50 +1,66 @@
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost:27017/fruitsDB', { useNewUrlParser: true,  useUnifiedTopology: true  });
 
-const MongoClient = require('mongodb').MongoClient;
-const assert = require('assert');
-
-// Connection URL
-const url = 'mongodb://localhost:27017';
-
-// Database Name
-const dbName = 'fruitsDB';
-
-// Create a new MongoClient
-const client = new MongoClient(url, { useUnifiedTopology: true });
-
-// Use connect method to connect to the Server
-client.connect(function(err, client) {
-  assert.equal(null, err);
-  console.log("Connected correctly to server");
-
-  const db = client.db(dbName);
-
-  // // Insert a single document
-  // db.collection('inserts').insertOne({a:1}, function(err, r) {
-  //   assert.equal(null, err);
-  //   assert.equal(1, r.insertedCount);
-
-    // Insert multiple documents
-    db.collection('fruits').insertMany([
-      {
-        name: 'Apple',
-        score: 8,
-        review: 'classic stuff'
-      },
-      {
-        name: 'Orange',
-        score: 9,
-        review: 'good stuff'
-      },
-      {
-        name: 'Banana',
-        score: 8,
-        review: 'classic smoothie'
-      }
-    ], function(err, r) {
-      assert.equal(null, err);
-      assert.equal(3, r.insertedCount);
-
-      client.close();
-    // });
-  });
+// Schemas
+// fruit schema
+const fruitSchema = new mongoose.Schema({
+   name: String,
+   rating: Number,
+   review: String
 });
+// people schema
+const peopleSchema = new mongoose.Schema({
+  name: String,
+  age: Number
+});
+
+
+const Fruit = mongoose.model('Fruit', fruitSchema);
+
+const apple = new Fruit ({
+  name: 'Apple',
+  rating: 9,
+  review: 'Good stuff man.'
+
+});
+
+
+const Person = mongoose.model('Person', peopleSchema);
+
+const person = new Person ({
+  name: 'Jon',
+  age: 25
+});
+person.save();
+
+
+const jackfruit = new Fruit ({
+  name: 'Jackfruit',
+  rating: 10,
+  review: 'Very nice!'
+
+});
+
+const orange = new Fruit ({
+  name: 'Orange',
+  rating: 9,
+  review: 'Aight'
+
+});
+
+const pear = new Fruit ({
+  name: 'Pear',
+  rating: 7,
+  review: 'Not too bad'
+
+});
+
+Fruit.insertMany([jackfruit, orange, pear], function(err){
+  if (err){
+    console.log(err);
+  } else{
+    console.log('Success');
+  }
+});
+
+// fruit.save();

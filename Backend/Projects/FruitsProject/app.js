@@ -55,12 +55,19 @@ const pear = new Fruit ({
 
 });
 
-Fruit.insertMany([jackfruit, orange, pear], function(err){
+// Fruit.insertMany([jackfruit, orange, pear], function(err){
+//   if (err){
+//     console.log(err);
+//   } else{
+//     console.log('Success');
+//   }
+// });
+
+Fruit.find(function(err, fruits){
   if (err){
     console.log(err);
-  } else{
-    console.log('Success');
+  }else {
+    console.log(fruits);
   }
 });
-
 // fruit.save();
